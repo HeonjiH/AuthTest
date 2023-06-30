@@ -15,4 +15,7 @@ builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().Cre
 
 builder.Services.AddApiAuthorization();
 
+builder.Services.AddOptions();
+builder.Services.AddAuthorizationCore();
+
 await builder.Build().RunAsync();
